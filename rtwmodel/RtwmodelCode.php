@@ -5,10 +5,7 @@
  * @author Asif Ali M <asif@reloadtheweb.com>
  * @package application.gii
  * 
- * 
- * RtwModel is to extend the model creation functionality. We are only ovverride the method to generate a class 
- * name with prefix 'Base' added to it.This is the best practice to avoid ovewriting of the files when updating 
- * the model files.
+ * RtwModel is to extend the model creation functionality. We are extending the ModelCode class to customize it. 
  * 
  */
 

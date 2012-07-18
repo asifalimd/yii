@@ -1,11 +1,11 @@
-rtwModel Generator - An extension to Yii framework'e existing model generator.
+rtwModel Generator - An extension to Yii framework's existing model generator.
 ====================
 
 Description
 -----------
 This is inspired from the php5 popular ORMs Propel and Doctrine
 
-This generators is created to solve the overwrite issue when updating a model. This is the replacement tool for model generator. This generator will create 2 model (Base model and Model) files. Whenever the shema changes we only have to rebuild the BaseModel. All user defined code will be written in Model file so we do not have to worry about losing our code while rebuilding the model and this also saves the developer time doing manual changes when rebuilding the model with yii model generator.
+This generator is created to solve the overwrite issue when updating a model. This is the replacement tool for model generator. This generator will create 2 model (Base model and Model) files. Whenever the shema changes we only have to rebuild the BaseModel. All user defined code will be written in Model file so we do not have to worry about losing our code while rebuilding the model and this also saves the developer time doing manual changes when rebuilding the model with yii model generator.
 
 
 Requirements
@@ -32,5 +32,8 @@ Example for user table:
 Create a model for user table using the rtwModel generator.
 It will create 2 files 
  - models/base/BaseUser.php ( Never change / add anything in this base class)
- - models/User.php ( All user defined business logic should go here)
+ - models/User.php ( All user defined business logic specific to model should go here)
+
+ When schema changes happend you use the generator to generate the model again. At this step it will ask you to what file to overwrite. You need to carefully uncheck the Model (User.php) to avoid losing your code. 
+ You always rebuild the BaseModel(BaseUser.php) and the Model(User) is built only firsttime.
 
