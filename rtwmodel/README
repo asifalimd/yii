@@ -1,0 +1,36 @@
+rtwModel Generator - An extension to Yii framework'e existing model generator.
+====================
+
+Description
+-----------
+This is inspired from the php5 popular ORMs Propel and Doctrine
+
+This generators is created to solve the overwrite issue when updating a model. This is the replacement tool for model generator. This generator will create 2 model (Base model and Model) files. Whenever the shema changes we only have to rebuild the BaseModel. All user defined code will be written in Model file so we do not have to worry about losing our code while rebuilding the model and this also saves the developer time doing manual changes when rebuilding the model with yii model generator.
+
+
+Requirements
+------------
+Yii framework 1.1.X
+
+
+Installation
+------------
+Create a new directory called 'gii' under protected/extensions directory and copy the generator directory in gii. So the final path shlold look like this
+protected/extensions/gii/rtwmodel
+
+Now in the protected/config/main.php, under the gii component add this setting
+
+'generatorPaths'=>array(
+	'ext.gii',   // a path alias
+	),
+
+
+Example 
+------------
+Example for user table:
+
+Create a model for user table using the rtwModel generator.
+It will create 2 files 
+ - models/base/BaseUser.php ( Never change / add anything in this base class)
+ - models/User.php ( All user defined business logic should go here)
+
