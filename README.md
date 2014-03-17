@@ -1,4 +1,4 @@
-yii
-===
+YII Components
+==============
 
-yii component library
+Developed one custom model generator and one google chart widget for YII framework
